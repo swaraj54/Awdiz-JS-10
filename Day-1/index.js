@@ -7,6 +7,7 @@
 //  'Awdiz'
 //  '20'
 
+
 console.log(typeof "Awdiz", "Awdiz");
 console.log(typeof "Awdiz", "Awdiz");
 console.log(typeof `Awdiz`, `Awdiz`);
