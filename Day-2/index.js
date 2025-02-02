@@ -24,7 +24,7 @@ if all conditions are false then only it'll return false
 
 var number = 100;
 number++;
-number = number + 1;
+number = number + 1; // 102
 number += 34;
 console.log(number);
 
@@ -55,11 +55,11 @@ switch
 
 if else
 condition => true false
-if(condition) { 2 == 3
+if(conditions) { 2 == 3
     print statement 1
-} else if(condition){ 2 == 3
+} else if(conditions){ 2 == 3
     print statement 2
-} else if(condition){
+} else if(conditions){
     print statement 3
 } else {
     print statement 4
@@ -124,12 +124,16 @@ switch - matching    apple == apple
 switch( key  ){
     case 1:
         statement 1
+        break;
     case 2:
         statement 2
+        break;
     case 3:
         statement 3
+        break;
     default :
         statement last
+        break;
 }
 
 var userSelectedFruit = "Strawberry";

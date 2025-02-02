@@ -26,11 +26,11 @@ var nums = [1, 2, 3];
 var newNums = nums.map((ele) => ele * 2);
 console.log(newNums);
 
-// aallows to perform a  new task
+// aallows to perform a  new task excution
 
 var nums = [1, 2, 3];
 
- const newArray = nums.forEach((ele) => {
+nums.forEach((ele) => {
   if (ele % 2 == 0) {
     console.log(`Even number is ${ele}`);
   } else {
@@ -38,7 +38,6 @@ var nums = [1, 2, 3];
   }
 });
 
-console.log(newArray)
 
 // return a filtered array
 
@@ -70,7 +69,7 @@ console.log(isExists,"isExists")
 its return only passed single elements indec
 var nums = [1, 2, 3];
 var myFunctionToFindNumber = (ele) => ele > 0;
-console.log(nums.findIndex(myFunctionToFindNumber));
+console.log(nums.findIndex(myFunctionToFindNumber));  0
 
 var myArray = ["a", "b", "c", "d"]; //  array.length  = 4
 
@@ -140,9 +139,9 @@ console.log(result, "result");
 // i >= 0;
 // -1 >= 0 -> false
 
-// function greet() {
-//   console.log("Hello");
-//   return "Hello"; 
-//   console.log("Hello");
-// }
-// console.log(result, "result");
+function greet() {
+  console.log("Hello");
+  return "Hello"; 
+  console.log("Hello");
+}
+console.log(greet());

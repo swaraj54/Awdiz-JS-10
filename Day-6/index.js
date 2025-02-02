@@ -40,7 +40,7 @@ var myName = "Awdiz" , "vashi", 123, true ;
 Array;
 var myName = "Awdiz";
 
-var myNumbers = ["hello", true, false, myName, 1, 2, 3, 4, 5, 5, 6, 7];
+var myNumbers = ["hello", true, false, myName, 1, 2, 3, 4, 5, 5, 6, 7, [1,2,3, [2,3]]];
 console.log(myNumbers);
 
 console.log(myNumbers[0], "myNumbers[0]");
@@ -53,8 +53,8 @@ console.log(myNumbers[myNumbers.length - 1])
 console.log((myNumbers.length - 1) / 2);
 console.log(myNumbers[(myNumbers.length - 1) / 2]);
 
-console.log(Math.floor(5.5));
-console.log(Math.ceil(5.5));
+console.log(Math.floor(5.5)); 5
+console.log(Math.ceil(5.5)); 6
 console.log(Math.ceil((myNumbers.length - 1) / 2));
 console.log(myNumbers[Math.ceil((myNumbers.length - 1) / 2)]);
 
@@ -64,8 +64,8 @@ var myData = [1, 2, 3, 4, "hello", "hi", true,23,34,53,"sedfea"];
 
 const printAllElements = (array) => {
     console.log(array, "array");
-    let i = 0;
-    while (i < array.length) {}
+    // let i = 0;
+    // while (i < array.length) {}
 
   for (var i = 0; i < array.length; i++) {
     console.log(i, "i", array[i]);
