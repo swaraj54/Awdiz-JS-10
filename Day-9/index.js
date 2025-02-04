@@ -1,9 +1,7 @@
 Callback
 Promise
 Async await
-fetch api
-
-
+fetch  -> api
 setTimeout
 setInterval
 
