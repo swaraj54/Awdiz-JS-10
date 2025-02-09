@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parentDiv">
+      <h1 id="childDiv">Child</h1>
+    </div>
+    <h1 class="myClass">Hello</h1>
+    <input id="nameId" name="userName" />
+    <input name="email" />
+    <input name="password" />
+    <input id="myId" onchange="handleChange()" name="confirmPassword" />
+    <script>
+        console.log(document.getElementById("myId"), "here");
+        console.log(document.querySelector(".myClass"), "here");
+        console.log(document.querySelectorAll("h1"), "here");
+        console.log(document.getElementsByClassName("myClass"), "myClass");
+        console.log(document.getElementsByTagName("h1"), "getElementsByTagName");
+        document.getElementById("myId").innerHTML = "Welcome.";
+        document.getElementById("myId").style.color = "red";
+
+        let myChildrenElement = document.createElement("h1");
+        myChildrenElement.innerHTML = "Hi everyone.";
+        console.log(myChildrenElement, "myChildrenElement");
+        let parentContainer = document.getElementById("myId");
+        parentContainer.appendChild(myChildrenElement);
+
+        function myFunction() {
+          console.log("Clicked.");
+        }
+        document.getElementById("myId").addEventListener("click", myFunction);
+        document.getElementById("myId").removeEventListener("click", myFunction);
+
+      document
+        .getElementById("parentDiv")
+        .addEventListener("click", function () {
+          console.log("Parent Click");
+        });
+
+      document
+        .getElementById("childDiv")
+        .addEventListener("click", function () {
+          console.log("ChildDiv Click");
+        });
+      document
+        .getElementById("parentDiv")
+        .addEventListener("click", function () {
+          console.log(event, "event");
+
+          //   if (event.target && event.target.matches("h1")) console.log("Click");
+        });
+      document.getElementById("nameId").addEventListener("click", function () {
+        console.log(event.target.name, "event");
+
+        if (event.target && event.target.matches("h1")) console.log("Click");
+      });
+
+      document.getElementById("nameId").addEventListener("change", function () {
+        console.log(event.target.name, "event");
+        console.log(document.getElementById("nameId").value);
+        //   if (event.target && event.target.matches("h1")) console.log("Click");
+      });
+      console.log(document.getElementById("nameId").value);
+
+      function handleChange() {
+        console.log(document.getElementById("myId").value);
+      }
+
+      localStorage.setItem("username", "Awdiz Insitute");
+      console.log(localStorage.getItem("username"));
+      localStorage.removeItem("username");
+    </script>
+  </body>
+</html>

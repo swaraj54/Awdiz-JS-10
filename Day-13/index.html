@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="username" type="text" placeholder="Type your name.." />
+    <button onclick="login()">Login</button>
+    <h1>Logged user list :</h1>
+    <div id="parentDiv"></div>
+    <script>
+      window.onload = function () {
+        alert("Welcome.");
+
+        const userNameList = JSON.parse(localStorage.getItem("userList")) || [];
+        const parentContainer = document.getElementById("parentDiv");
+        // const h1 = document.createElement("h1");
+
+        let structure = "";
+        for (var i = 0; i < userNameList.length; i++) {
+          //   h1.innerHTML = userNameList[i];
+          structure += `<h1>${userNameList[i]}</h1>`;
+          //   h1.innerHTML += structure = userNameList[i];
+          //   console.log(h1.innerHTML, "h1.innerHTML");
+          //   parentContainer.appendChild(h1);
+        }
+        console.log(structure, "structure");
+        parentContainer.innerHTML = structure;
+      };
+
+      function login() {
+        // alert("Inside function.");
+        const userName = document.getElementById("username").value;
+        console.log(userName, "userName");
+
+        const userNameList = JSON.parse(localStorage.getItem("userList")) || [];
+
+        // console.log(userNameList, "userNameList");
+        userNameList.push(userName);
+        // console.log(userNameList, "userNameList");
+        localStorage.setItem("userList", JSON.stringify(userNameList));
+
+        document.getElementById("username").value = "";
+
+        const parentContainer = document.getElementById("parentDiv");
+
+        // const h1 = document.createElement("h1");
+
+        let structure = "";
+        for (var i = 0; i < userNameList.length; i++) {
+          //   h1.innerHTML = userNameList[i];
+          structure += `<h1>${userNameList[i]}</h1>`;
+          //   h1.innerHTML += structure = userNameList[i];
+          //   console.log(h1.innerHTML, "h1.innerHTML");
+          //   parentContainer.appendChild(h1);
+        }
+        console.log(structure, "structure");
+        parentContainer.innerHTML = structure;
+        // parentContainer.appendChild(structure);
+        // const object = { name: "Awdiz" };
+        // console.log(object);
+        // const jsonoBJECT = JSON.stringify(object);
+        // console.log(jsonoBJECT);
+        // console.log(JSON.parse(jsonoBJECT));
+        // JSON.parse();
+
+        // JS {name : "Swaraj"}
+        // JSON  JAVASCRIPT OBJECT NOTATION  {"name" : "Swaraj"}
+
+        // const h1 = document.createElement("h1");
+        // h1.innerHTML = userName;
+        // parentContainer.appendChild(h1);
+      }
+    </script>
+  </body>
+</html>
