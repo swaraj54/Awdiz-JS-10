@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="input" />
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      // Draw a rectangle
+      ctx.fillStyle = "blue";
+      ctx.fillRect(50, 50, 100, 100);
+
+      // Draw a circle
+      ctx.beginPath();
+      ctx.arc(100, 100, 50, 0, Math.PI * 2);
+      ctx.fillStyle = "red";
+      ctx.fill();
+
+      //   if (navigator.onLine) {
+      //     console.log("You are online!");
+      //   } else {
+      //     console.log("You are offline.");
+      //   }
+
+      //   // Get browser language
+      //   console.log(navigator.language);
+      //   //   console.log(navigator.geolocation);
+      //   if (navigator.geolocation) {
+      //     navigator.geolocation.getCurrentPosition(
+      //       (position) => {
+      //         const { latitude, longitude } = position.coords;
+      //         console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+      //       },
+      //       (error) => {
+      //         console.log("Error getting geolocation:", error);
+      //       }
+      //     );
+      //   } else {
+      //     console.log("Geolocation is not supported by this browser.");
+      //   }
+
+      //   function debounce(func, delay) {
+      //     let timer;
+      //     return function (...args) {
+      //       clearTimeout(timer);
+      //       timer = setTimeout(() => func(...args), delay);
+      //     };
+      //   }
+
+      //   const logInput = debounce((input) => console.log(input), 1000);
+
+      //   document
+      //     .getElementById("input")
+      // .addEventListener("input", (e) => logInput(e.target.value));
+    </script>
+  </body>
+</html>
